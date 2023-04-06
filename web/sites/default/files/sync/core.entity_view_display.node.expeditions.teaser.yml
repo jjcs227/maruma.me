@@ -1,0 +1,36 @@
+uuid: 2834251c-ab9a-4f11-99ac-c70dd52bb6cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.expeditions.field_dates
+    - field.field.node.expeditions.field_description_of_the_expedit
+    - field.field.node.expeditions.field_duration
+    - field.field.node.expeditions.field_guided_by_
+    - field.field.node.expeditions.field_organizer
+    - field.field.node.expeditions.field_past_expedition_pictures
+    - field.field.node.expeditions.field_skill
+    - field.field.node.expeditions.field_type_of_expedition
+    - node.type.expeditions
+  module:
+    - user
+id: node.expeditions.teaser
+targetEntityType: node
+bundle: expeditions
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_dates: true
+  field_description_of_the_expedit: true
+  field_duration: true
+  field_guided_by_: true
+  field_organizer: true
+  field_past_expedition_pictures: true
+  field_skill: true
+  field_type_of_expedition: true

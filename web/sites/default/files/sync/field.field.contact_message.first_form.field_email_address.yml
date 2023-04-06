@@ -1,0 +1,21 @@
+uuid: c365ea16-5362-42cf-ba57-0fe0c2e943d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.first_form
+    - field.storage.contact_message.field_email_address
+  module:
+    - text
+id: contact_message.first_form.field_email_address
+field_name: field_email_address
+entity_type: contact_message
+bundle: first_form
+label: 'email address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

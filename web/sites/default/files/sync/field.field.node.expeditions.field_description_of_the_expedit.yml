@@ -1,0 +1,21 @@
+uuid: 787d5c6e-63c9-4615-82de-e55f5260ebd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_of_the_expedit
+    - node.type.expeditions
+  module:
+    - text
+id: node.expeditions.field_description_of_the_expedit
+field_name: field_description_of_the_expedit
+entity_type: node
+bundle: expeditions
+label: 'Description of the Expedition'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

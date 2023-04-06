@@ -1,0 +1,21 @@
+uuid: 39e93e69-c068-4c9b-8bd2-cacd4cb43b80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duration
+    - node.type.expeditions
+  module:
+    - options
+id: node.expeditions.field_duration
+field_name: field_duration
+entity_type: node
+bundle: expeditions
+label: Duration
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

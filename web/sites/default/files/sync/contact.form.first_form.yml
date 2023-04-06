@@ -1,0 +1,12 @@
+uuid: 3d600267-703a-4544-860d-129673e3f2e2
+langcode: en
+status: true
+dependencies: {  }
+id: first_form
+label: 'first form'
+recipients:
+  - info@maruma.me
+reply: ''
+weight: 0
+message: 'We will in contact with you shortly'
+redirect: ''

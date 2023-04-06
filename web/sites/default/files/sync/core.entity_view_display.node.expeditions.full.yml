@@ -1,0 +1,80 @@
+uuid: a29480c8-507b-44af-acb0-36bca4c61b93
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.expeditions.field_dates
+    - field.field.node.expeditions.field_description_of_the_expedit
+    - field.field.node.expeditions.field_duration
+    - field.field.node.expeditions.field_guided_by_
+    - field.field.node.expeditions.field_organizer
+    - field.field.node.expeditions.field_past_expedition_pictures
+    - field.field.node.expeditions.field_skill
+    - field.field.node.expeditions.field_type_of_expedition
+    - node.type.expeditions
+  module:
+    - datetime
+    - options
+    - text
+    - user
+id: node.expeditions.full
+targetEntityType: node
+bundle: expeditions
+mode: full
+content:
+  field_dates:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_description_of_the_expedit:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_duration:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_organizer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_skill:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_type_of_expedition:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_guided_by_: true
+  field_past_expedition_pictures: true

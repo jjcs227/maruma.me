@@ -1,0 +1,18 @@
+uuid: 6c34e413-bbf5-430c-99cd-46561d1d8560
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.expeditions
+id: node.expeditions.title
+field_name: title
+entity_type: node
+bundle: expeditions
+label: 'Name of the Expedition'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

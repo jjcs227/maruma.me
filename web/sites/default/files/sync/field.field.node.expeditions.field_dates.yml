@@ -1,0 +1,24 @@
+uuid: b3143ac2-c9cc-4c09-8ced-7e57d1d2ebd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dates
+    - node.type.expeditions
+  module:
+    - datetime
+id: node.expeditions.field_dates
+field_name: field_dates
+entity_type: node
+bundle: expeditions
+label: Dates
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

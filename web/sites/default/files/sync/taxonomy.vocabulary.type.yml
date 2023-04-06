@@ -1,0 +1,8 @@
+uuid: 589606db-8db6-40c1-9d87-3ea0b831b117
+langcode: en
+status: true
+dependencies: {  }
+name: type
+vid: type
+description: 'Type of Expedition'
+weight: 0
