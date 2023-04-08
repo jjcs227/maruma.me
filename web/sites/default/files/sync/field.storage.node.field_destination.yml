@@ -1,0 +1,42 @@
+uuid: 11f0c43f-6ea0-4eff-9993-b1214ce22b28
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_destination
+field_name: field_destination
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Venezuela
+      label: Venezuela
+    -
+      value: Colombia
+      label: Colombia
+    -
+      value: Ecuador
+      label: Ecuador
+    -
+      value: Peru
+      label: Peru
+    -
+      value: Bolivia
+      label: Bolivia
+    -
+      value: Argentina
+      label: Argentina
+    -
+      value: 'New Zealand'
+      label: 'New Zealand'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

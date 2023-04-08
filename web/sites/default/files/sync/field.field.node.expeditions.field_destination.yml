@@ -1,0 +1,21 @@
+uuid: 0c6a7c75-3a9d-4a5f-89b9-1601be258471
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_destination
+    - node.type.expeditions
+  module:
+    - options
+id: node.expeditions.field_destination
+field_name: field_destination
+entity_type: node
+bundle: expeditions
+label: Destination
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
