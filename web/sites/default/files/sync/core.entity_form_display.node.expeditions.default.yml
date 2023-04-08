@@ -5,12 +5,15 @@ dependencies:
   config:
     - field.field.node.expeditions.field_dates
     - field.field.node.expeditions.field_description_of_the_expedit
+    - field.field.node.expeditions.field_destination
     - field.field.node.expeditions.field_duration
     - field.field.node.expeditions.field_guided_by_
+    - field.field.node.expeditions.field_main_expedition_image
     - field.field.node.expeditions.field_organizer
     - field.field.node.expeditions.field_past_expedition_pictures
     - field.field.node.expeditions.field_skill
     - field.field.node.expeditions.field_type_of_expedition
+    - field.field.node.expeditions.layout_builder__layout
     - image.style.thumbnail
     - node.type.expeditions
   module:
@@ -43,6 +46,12 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_destination:
+    type: options_buttons
+    weight: 131
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_duration:
     type: options_select
     weight: 123
@@ -50,14 +59,18 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_guided_by_:
-    type: entity_reference_autocomplete
+    type: options_select
     weight: 130
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_main_expedition_image:
+    type: image_image
+    weight: 132
+    region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_organizer:
     type: options_select
@@ -130,4 +143,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

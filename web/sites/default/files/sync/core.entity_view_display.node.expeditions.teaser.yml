@@ -3,34 +3,192 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.expeditions.title
     - core.entity_view_mode.node.teaser
     - field.field.node.expeditions.field_dates
     - field.field.node.expeditions.field_description_of_the_expedit
+    - field.field.node.expeditions.field_destination
     - field.field.node.expeditions.field_duration
     - field.field.node.expeditions.field_guided_by_
+    - field.field.node.expeditions.field_main_expedition_image
     - field.field.node.expeditions.field_organizer
     - field.field.node.expeditions.field_past_expedition_pictures
     - field.field.node.expeditions.field_skill
     - field.field.node.expeditions.field_type_of_expedition
+    - field.field.node.expeditions.layout_builder__layout
     - node.type.expeditions
   module:
+    - datetime
+    - layout_builder
+    - options
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'expedition card'
+          context_mapping: {  }
+          column_widths: 67-33
+        components:
+          92914425-cedb-4d5f-9517-2eb41396a4e1:
+            uuid: 92914425-cedb-4d5f-9517-2eb41396a4e1
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_type_of_expedition'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          b425b2b9-a276-4c6c-a4cc-3fe01e1a0e62:
+            uuid: b425b2b9-a276-4c6c-a4cc-3fe01e1a0e62
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_duration'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          8fe02282-43b1-4e05-8ea9-fe6ed9c09e0e:
+            uuid: 8fe02282-43b1-4e05-8ea9-fe6ed9c09e0e
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_skill'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          5da1f840-10b5-4922-a200-bb943cec5319:
+            uuid: 5da1f840-10b5-4922-a200-bb943cec5319
+            region: first
+            configuration:
+              id: 'field_block:node:expeditions:field_main_expedition_image'
+              label: 'Main Expedition Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          9026cad3-88e8-4859-8e6d-51d9ea96bcf8:
+            uuid: 9026cad3-88e8-4859-8e6d-51d9ea96bcf8
+            region: first
+            configuration:
+              id: 'field_block:node:expeditions:title'
+              label: 'Name of the Expedition'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          4af0542c-54f8-421a-9a25-810eaf16b30e:
+            uuid: 4af0542c-54f8-421a-9a25-810eaf16b30e
+            region: first
+            configuration:
+              id: 'field_block:node:expeditions:field_description_of_the_expedit'
+              label: 'Description of the Expedition'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 400
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
 id: node.expeditions.teaser
 targetEntityType: node
 bundle: expeditions
 mode: teaser
 content:
+  field_dates:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_duration:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_skill:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_type_of_expedition:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
-  field_dates: true
   field_description_of_the_expedit: true
-  field_duration: true
+  field_destination: true
   field_guided_by_: true
+  field_main_expedition_image: true
   field_organizer: true
   field_past_expedition_pictures: true
-  field_skill: true
-  field_type_of_expedition: true
+  layout_builder__layout: true

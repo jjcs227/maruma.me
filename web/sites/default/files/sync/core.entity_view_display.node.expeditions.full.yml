@@ -6,18 +6,227 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.expeditions.field_dates
     - field.field.node.expeditions.field_description_of_the_expedit
+    - field.field.node.expeditions.field_destination
     - field.field.node.expeditions.field_duration
     - field.field.node.expeditions.field_guided_by_
+    - field.field.node.expeditions.field_main_expedition_image
     - field.field.node.expeditions.field_organizer
     - field.field.node.expeditions.field_past_expedition_pictures
     - field.field.node.expeditions.field_skill
     - field.field.node.expeditions.field_type_of_expedition
+    - field.field.node.expeditions.layout_builder__layout
     - node.type.expeditions
   module:
     - datetime
+    - image
+    - layout_builder
+    - layout_discovery
     - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Hero
+          context_mapping: {  }
+        components:
+          441ee328-99b9-4383-a378-a46c6b1e43b4:
+            uuid: 441ee328-99b9-4383-a378-a46c6b1e43b4
+            region: content
+            configuration:
+              id: 'field_block:node:expeditions:field_main_expedition_image'
+              label: 'Main Expedition Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: wide
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: main
+          context_mapping: {  }
+          column_widths: 67-33
+        components:
+          b016a1ba-d197-4da1-8799-39968c53da6f:
+            uuid: b016a1ba-d197-4da1-8799-39968c53da6f
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_duration'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          52f146ab-d316-4ae0-9adc-4baf8ab0145b:
+            uuid: 52f146ab-d316-4ae0-9adc-4baf8ab0145b
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_skill'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          1d9b3a74-a956-454f-bf96-27219f4b662a:
+            uuid: 1d9b3a74-a956-454f-bf96-27219f4b662a
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_type_of_expedition'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          7d4da043-9c05-4849-b577-bb80e060ef6a:
+            uuid: 7d4da043-9c05-4849-b577-bb80e060ef6a
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_organizer'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          3a789654-4306-449e-86c4-19ea56cc42f4:
+            uuid: 3a789654-4306-449e-86c4-19ea56cc42f4
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_guided_by_'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          c30e0ccf-35d0-4e37-8d91-a8c63e3088be:
+            uuid: c30e0ccf-35d0-4e37-8d91-a8c63e3088be
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_dates'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          265ddd41-b783-412c-874e-db9804ecc620:
+            uuid: 265ddd41-b783-412c-874e-db9804ecc620
+            region: first
+            configuration:
+              id: 'field_block:node:expeditions:field_description_of_the_expedit'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a1e241ab-b1f5-40a6-911e-c813d84fb6d1:
+            uuid: a1e241ab-b1f5-40a6-911e-c813d84fb6d1
+            region: first
+            configuration:
+              id: 'extra_field_block:node:expeditions:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 2
+            additional: {  }
+          d0b59621-0146-4a7f-b5c9-f47b38a0a600:
+            uuid: d0b59621-0146-4a7f-b5c9-f47b38a0a600
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_past_expedition_pictures'
+              label: 'Past Expedition Pictures'
+              label_display: visible
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: thumbnail
+                  image_loading:
+                    attribute: eager
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          8abac582-0f13-440b-bdcf-b8639007e06e:
+            uuid: 8abac582-0f13-440b-bdcf-b8639007e06e
+            region: second
+            configuration:
+              id: 'field_block:node:expeditions:field_destination'
+              label: Destination
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 id: node.expeditions.full
 targetEntityType: node
 bundle: expeditions
@@ -30,21 +239,29 @@ content:
       timezone_override: ''
       format_type: medium
     third_party_settings: {  }
-    weight: 104
+    weight: 2
     region: content
   field_description_of_the_expedit:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 108
+    weight: 6
     region: content
   field_duration:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 103
+    weight: 1
+    region: content
+  field_guided_by_:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_organizer:
     type: entity_reference_label
@@ -52,7 +269,18 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 105
+    weight: 3
+    region: content
+  field_past_expedition_pictures:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 7
     region: content
   field_skill:
     type: entity_reference_label
@@ -60,7 +288,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 107
+    weight: 5
     region: content
   field_type_of_expedition:
     type: entity_reference_label
@@ -68,13 +296,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 106
+    weight: 4
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
-  field_guided_by_: true
-  field_past_expedition_pictures: true
+  field_destination: true
+  field_main_expedition_image: true
+  layout_builder__layout: true
